@@ -7,6 +7,8 @@ DROP TABLE IF EXISTS "session";
 
 DROP TABLE IF EXISTS "user";
 
+DROP TABLE IF EXISTS "description";
+
 DROP TABLE IF EXISTS "job";
 
 DROP TABLE IF EXISTS "output_img";
@@ -28,9 +30,15 @@ CREATE TABLE "output_img" (
 
 CREATE TABLE "job" (
     "id" serial PRIMARY KEY,
-    "name" text,
-    "descriptions" text [ ],
-    "img_path" text
+    "name" text NOT NULL,
+    "img_path" text NOT NULL
+);
+
+CREATE TABLE "description" (
+    "id" serial primary key,
+    "job_id" INT,
+    "description" text NOT NULL,
+    FOREIGN key ("job_id") REFERENCES "job" ("id")
 );
 
 CREATE TABLE "user" ("id" VARCHAR PRIMARY KEY);
