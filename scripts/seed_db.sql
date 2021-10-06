@@ -19,11 +19,8 @@ INSERT INTO
     "job" ("name", "img_path")
 VALUES
     ('doctor', 'doctor.jpg'),
-    (
-        'police officer',
-        'police_officer.jpg'
-    ),
-    ('fireman', 'fireman.jpg'),
+    ('police', 'police.jpg'),
+    ('fire fighter', 'fire_fighter.jpg'),
     ('teacher', 'teacher.jpg'),
     ('engineer', 'engineer.jpg'),
     ('chef', 'chef.jpg'),
