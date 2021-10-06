@@ -1,4 +1,4 @@
-# wellness_db
+# AI Job Teacher DB
 
 Databasing for AI Job Teacher
 
