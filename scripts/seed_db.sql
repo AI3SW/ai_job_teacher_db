@@ -4,10 +4,10 @@ SET
 
 -- drop all rows table before insertion
 DELETE FROM
-    "job";
+    "description";
 
 DELETE FROM
-    "description";
+    "job";
 
 -- restart sequence
 ALTER SEQUENCE "job_id_seq" RESTART WITH 1;
