@@ -38,7 +38,7 @@ CREATE TABLE "description" (
     "id" serial primary key,
     "job_id" INT,
     "description" text NOT NULL,
-    FOREIGN key ("job_id") REFERENCES "job" ("id")
+    FOREIGN key ("job_id") REFERENCES "job" ("id") ON DELETE CASCADE
 );
 
 CREATE TABLE "user" ("id" VARCHAR PRIMARY KEY);
@@ -51,7 +51,7 @@ CREATE TABLE "session" (
     "output_img_id" INT,
     "start_time" timestamptz,
     "end_time" timestamptz,
-    FOREIGN KEY ("job_id") REFERENCES "job"("id"),
+    FOREIGN KEY ("job_id") REFERENCES "job"("id") ON DELETE CASCADE,
     FOREIGN KEY ("input_img_id") REFERENCES "input_img"("id"),
     FOREIGN KEY ("output_img_id") REFERENCES "output_img"("id"),
     FOREIGN KEY ("user_id") REFERENCES "user"("id")
